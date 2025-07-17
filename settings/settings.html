@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+    <div class="settings-container">
+        <div class="settings-header">
+            <h1>Settings</h1>
+            <button class="back-btn" onclick="closeSettings()">✕</button>
+        </div>
+        
+        <div class="settings-content">
+            <div class="settings-card" onclick="openApiKeysSettings()">
+                <div class="card-icon">🔑</div>
+                <div class="card-content">
+                    <h3>API Keys Management</h3>
+                    <p>Configure your Binance API keys</p>
+                    <div class="card-status" id="apiKeysStatus">Not configured</div>
+                </div>
+                <div class="card-arrow">›</div>
+            </div>
+            
+            <div class="settings-card" onclick="openCustomizationSettings()">
+                <div class="card-icon">🎨</div>
+                <div class="card-content">
+                    <h3>Customization Settings</h3>
+                    <p>Colors, transparency & themes</p>
+                </div>
+                <div class="card-arrow">›</div>
+            </div>
+            
+            <div class="settings-card" onclick="openSoundSettings()">
+                <div class="card-icon">🔊</div>
+                <div class="card-content">
+                    <h3>Sound Settings</h3>
+                    <p>Audio notifications & volume</p>
+                </div>
+                <div class="card-arrow">›</div>
+            </div>
+            
+            <div class="settings-card" onclick="openSystemSettings()">
+                <div class="card-icon">⚙️</div>
+                <div class="card-content">
+                    <h3>System Settings</h3>
+                    <p>Refresh rate & app behavior</p>
+                </div>
+                <div class="card-arrow">›</div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="settings.js"></script>
+</body>
+</html>
