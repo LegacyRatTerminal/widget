@@ -1,0 +1,22 @@
+{
+  "appearance": {
+    "backgroundColor": "rgb(13, 27, 20)",
+    "borderColor": "rgba(14, 203, 129, 0.555)",
+    "transparency": 100
+  },
+  "sounds": {
+    "masterMute": false,
+    "trade": true,
+    "tp": true,
+    "sl": true,
+    "volume": {
+      "trade": 80,
+      "tp": 80,
+      "sl": 80
+    }
+  },
+  "system": {
+    "refreshDuration": 5000,
+    "autoRefresh": true
+  }
+}
