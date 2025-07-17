@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Keys Settings</title>
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+    <div class="settings-container">
+        <div class="settings-header">
+            <h1>API Keys</h1>
+            <button class="back-btn" onclick="goBack()">←</button>
+        </div>
+        
+        <div class="settings-content">
+            <div class="info-card">
+                <div class="info-icon">ℹ️</div>
+                <div class="info-text">
+                    <p>Your API keys are encrypted and stored locally. They're never sent anywhere except to Binance.</p>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="apiKey">API Key</label>
+                <input type="text" id="apiKey" placeholder="Enter your Binance API Key" autocomplete="off">
+            </div>
+            
+            <div class="form-group">
+                <label for="apiSecret">API Secret</label>
+                <input type="password" id="apiSecret" placeholder="Enter your Binance API Secret" autocomplete="off">
+                <button class="toggle-password" onclick="togglePasswordVisibility()">👁️</button>
+            </div>
+            
+            <div class="button-group">
+                <button class="test-btn" onclick="testApiKeys()" id="testBtn">
+                    <span class="btn-text">Test Connection</span>
+                    <span class="btn-spinner" style="display: none;">⟳</span>
+                </button>
+                <button class="save-btn" onclick="saveApiKeys()" id="saveBtn">
+                    <span class="btn-text">Save Keys</span>
+                    <span class="btn-spinner" style="display: none;">⟳</span>
+                </button>
+            </div>
+            
+            <div class="status-message" id="statusMessage"></div>
+            
+            <div class="help-section">
+                <h3>How to get your API Keys:</h3>
+                <ol>
+                    <li>Go to <a href="#" onclick="openBinanceAPI()">Binance API Management</a></li>
+                    <li>Create a new API key</li>
+                    <li>Enable "Futures Trading" permission</li>
+                    <li>Copy the API Key and Secret here</li>
+                </ol>
+                
+                <div class="warning-box">
+                    <div class="warning-icon">⚠️</div>
+                    <div class="warning-text">
+                        <strong>Important:</strong> Only enable "Futures Trading" permission. Never enable withdrawal permissions for trading bots.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="api-keys.js"></script>
+</body>
+</html>
